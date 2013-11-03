@@ -113,4 +113,4 @@ fi
 ################################
 
 PS1='[-]\e[01;41m\e[37m\h\e[00m\e[01;32m[--( \e[01;36m\w\e[01;32m )--]\e[m \@ \n └ \u $ '
-echo hello?
+echo Screen size: `tput cols`x`tput lines`
