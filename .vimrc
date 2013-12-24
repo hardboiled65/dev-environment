@@ -13,3 +13,5 @@ ab pf printf(
 ab sf scanf(
 ab im int main(){
 ab rt0 return 0;
+
+hi Comment cterm=bold

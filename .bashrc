@@ -112,5 +112,11 @@ fi
 ####        個人設定        ####
 ################################
 
+#*-          Prompt          -*#
 PS1='[-]\e[01;41m\e[37m\h\e[00m\e[01;32m[--( \e[01;36m\w\e[01;32m )--]\e[m \@ \n └ \u $ '
+
+#*-     Startup message      -*#
 echo Screen size: `tput cols`x`tput lines`
+
+#*-          Aliases         -*#
+alias dfg='df --block-size=G'
