@@ -120,3 +120,4 @@ echo Screen size: `tput cols`x`tput lines`
 
 #*-          Aliases         -*#
 alias dfg='df --block-size=G'
+alias lsd='ls'
