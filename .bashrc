@@ -1,6 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+
+#
+UNAME=`uname -s`
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -121,3 +123,7 @@ echo Screen size: `tput cols`x`tput lines`
 #*-          Aliases         -*#
 alias dfg='df --block-size=G'
 alias lsd='ls' # protect typing miss
+
+if [ $UNAME == 'Darwin' ]; then
+	alias ls='ls -G'
+fi
