@@ -124,6 +124,6 @@ echo Screen size: `tput cols`x`tput lines`
 alias dfg='df --block-size=G'
 alias lsd='ls' # protect typing miss
 
-if [ $UNAME == 'Darwin' ]; then
+if [ "$UNAME" == 'Darwin' ]; then
 	alias ls='ls -G'
 fi
