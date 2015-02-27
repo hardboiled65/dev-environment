@@ -15,3 +15,12 @@ ab im int main(){
 ab rt0 return 0;
 
 hi Comment cterm=bold
+
+function MakeCGuard()
+	let filename=expand('%:t')
+	let guard=system('python3 -c "print(\"_' . filename . '\".upper().replace(\".\", \"_\"), end=\"\")"')
+	return guard " ex) _HEADER_H
+endfunction
+
+" Cguard: Make C header guard
+command Cguard :execute "normal! i#ifndef " . MakeCGuard() . "#define " .MakeCGuard() . "#endif /* " . MakeCGuard() . " */"
