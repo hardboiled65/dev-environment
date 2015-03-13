@@ -127,3 +127,6 @@ alias lsd='ls' # protect typing miss
 if [ "$UNAME" == 'Darwin' ]; then
 	alias ls='ls -G'
 fi
+
+alias tocp949='iconv -f "utf-8" -t "cp949"'
+alias toutf8='iconv -f "cp949" -t "utf-8"'
