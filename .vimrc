@@ -19,7 +19,7 @@ hi Comment cterm=bold
 """"""""""""""""""""""""
 ""     Mapping
 """"""""""""""""""""""""
-:map \ :set number!<CR>
+:map \\ :set number!<CR>
 
 """"""""""""""""""""""""
 ""     Functions
