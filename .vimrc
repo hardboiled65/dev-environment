@@ -7,6 +7,7 @@ set autoindent
 set nu
 set smartindent
 set shiftwidth=4
+set laststatus=2	" Always show filename
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
