@@ -20,6 +20,8 @@ hi Comment cterm=bold
 ""     Mapping
 """"""""""""""""""""""""
 :map \\ :set number!<CR>
+:map \[ :tabp<CR>			" Move to previous tab
+:map \] :tabn<CR>			" Move to next tab
 
 """"""""""""""""""""""""
 ""     Functions
@@ -30,9 +32,18 @@ function MakeCGuard()
 	let guard=system('python3 -c "print(\"_' . filename . '\".upper().replace(\".\", \"_\"), end=\"\")"')
 	return guard " ex) _HEADER_H
 endfunction
+" MakeCHeaderComment: Return C header comment template
+function MakeCHeaderComment()
+	let filename=expand('%:t')
+	let c_date=system('python3 -c "import time; print(time.strftime(\"%Y. %m. %d. %H:%M\", time.localtime()), end=\"\")"')
+	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Modified:   " . c_date . "\n" . "//  Copyright (c) 2015 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
+	return template
+endfunction
 
 """"""""""""""""""""""""
 ""     Commands
 """"""""""""""""""""""""
 " Cguard: Make C header guard
 command Cguard :execute "normal! i#ifndef " . MakeCGuard() . "#define " .MakeCGuard() . "#endif /* " . MakeCGuard() . " */"
+" Ccomment: Make C header comment
+command Ccomment :0put=MakeCHeaderComment()
