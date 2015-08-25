@@ -131,3 +131,5 @@ fi
 
 alias tocp949='iconv -f "utf-8" -t "cp949"'
 alias toutf8='iconv -f "cp949" -t "utf-8"'
+
+alias chx='chmod +x'
