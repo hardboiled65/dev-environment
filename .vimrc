@@ -1,7 +1,7 @@
 syntax on
 set ruler
 
-au Bufenter *.\(c\|cpp\|h\|html\|css\|php\|py\) set et
+au Bufenter *.\(c\|cpp\|h\|html\|css\|php\|py\|rs\) set et
 set ts=4
 set autoindent
 set nu
