@@ -16,6 +16,8 @@ ab rt0 return 0;
 
 hi Comment cterm=bold
 
+execute pathogen#infect()
+
 """"""""""""""""""""""""
 ""     Mapping
 """"""""""""""""""""""""
@@ -36,7 +38,7 @@ endfunction
 function MakeCHeaderComment()
 	let filename=expand('%:t')
 	let c_date=system('python3 -c "import time; print(time.strftime(\"%Y. %m. %d. %H:%M\", time.localtime()), end=\"\")"')
-	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Modified:   " . c_date . "\n" . "//  Copyright (c) 2015 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
+	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Copyright (c) 2015 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
 	return template
 endfunction
 
