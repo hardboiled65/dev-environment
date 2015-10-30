@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
-#
+# Get platform name
 UNAME=`uname -s`
 
 # If not running interactively, don't do anything
@@ -135,3 +135,11 @@ alias toutf8='iconv -f "cp949" -t "utf-8"'
 alias chx='chmod +x'
 
 alias cpuinfo='sudo dmidecode --type Processor'
+
+#*-           Helps          -*#
+HELPME='helpme - self defined help\n
+\n
+[ Count lines of source codes ]\n
+find . -name \"*\" | xargs wc -l\n'
+
+alias helpme='echo -e $HELPME'
