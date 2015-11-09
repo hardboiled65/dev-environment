@@ -16,7 +16,9 @@ ab rt0 return 0;
 
 hi Comment cterm=bold
 
-execute pathogen#infect()
+if filereadable(expand("~/.vim/autoload/pathogen.vim"))
+	execute pathogen#infect()
+endif
 
 """"""""""""""""""""""""
 ""     Mapping
