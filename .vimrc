@@ -16,6 +16,10 @@ ab rt0 return 0;
 
 hi Comment cterm=bold
 
+if exists('+colorcolumn')
+	set colorcolumn=80
+endif
+
 if filereadable(expand("~/.vim/autoload/pathogen.vim"))
 	execute pathogen#infect()
 endif
