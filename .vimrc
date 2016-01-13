@@ -47,6 +47,16 @@ function MakeCHeaderComment()
 	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Copyright (c) 2016 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
 	return template
 endfunction
+" MakeCExternCStart: Return extern C with __cplusplus def
+function MakeCExternCStart()
+	let externc="#ifdef __cplusplus\nextern \"C\" {\n#endif // __cplusplus"
+	return externc
+endfunction
+" MakeCExternCEnd: Return extern C end bracket with __cplusplus def
+function MakeCExternCEnd()
+	let externc="#ifdef __cplusplus\n}\n#endif // __cplusplus"
+	return externc
+endfunction
 
 """"""""""""""""""""""""
 ""     Commands
@@ -55,3 +65,7 @@ endfunction
 command Cguard :execute "normal! i#ifndef " . MakeCGuard() . "#define " .MakeCGuard() . "#endif /* " . MakeCGuard() . " */"
 " Ccomment: Make C header comment
 command Ccomment :0put=MakeCHeaderComment()
+" Cexterncstart: Make start extern C
+command Cexterncstart :execute "normal! i" . MakeCExternCStart()
+" Cexterncend: Make end extern C
+command Cexterncend :execute "normal! i" . MakeCExternCEnd()

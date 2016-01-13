@@ -1,0 +1,2 @@
+# Show which syntax highlighting current using
+:setlocal syntax?
