@@ -14,12 +14,19 @@ ab sf scanf(
 ab im int main(){
 ab rt0 return 0;
 
+""""""""""""""""""""""""
+""     Themes
+""""""""""""""""""""""""
+colorscheme elflord
 hi Comment cterm=bold
 
 if exists('+colorcolumn')
-	set colorcolumn=80
+	set colorcolumn=81
 endif
 
+""""""""""""""""""""""""
+""     Addons
+""""""""""""""""""""""""
 if filereadable(expand("~/.vim/autoload/pathogen.vim"))
 	execute pathogen#infect()
 endif
