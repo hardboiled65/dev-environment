@@ -111,7 +111,21 @@ fi
 ################################
 
 #*-          Prompt          -*#
-PS1='[-]\e[01;41m\e[37m\h\e[00m\e[01;32m[--( \e[01;36m\w\e[01;32m )--]\e[m \@ \n └ \u $ '
+# PS1='[-]\e[01;41m\e[37m\h\e[00m\e[01;32m[--( \e[01;36m\w\e[01;32m )--]\e[m \@ \n └ \u $ '
+CLOCK_FG='\[\e[38;5;233m\]'
+CLOCK_BG='\[\e[48;5;15m\]'
+USER_FG='\[\e[38;5;119m\]'
+HOST_FG='\[\e[38;5;207m\]'
+DIR_FG='\[\e[38;5;123m\]'
+BOLD='\[\e[1m\]'
+BLINK='\[\e[5m\]'
+RS='\[\e[00m\]'
+# use default colors for console
+if [ "$TERM" == 'linux' ]; then
+	PS1="\[\e[7m\]\A${RS} ${BOLD}\[\e[32m\]\u${RS}${BOLD}@${RS}${BOLD}\[\e[31m\]\h${RS}:${BOLD}\[\e[36m\w${RS} ${BOLD}\$${RS} "
+else
+	PS1="${CLOCK_FG}${CLOCK_BG}\D{%H}${BLINK}:${RS}${CLOCK_FG}${CLOCK_BG}\D{%M}${RS} ${BOLD}${USER_FG}\u${RS}${BOLD}@${RS}${BOLD}${HOST_FG}\h${RS}:${BOLD}${DIR_FG}\w${RS} ${BOLD}\$${RS} "
+fi
 
 #*-     Startup message      -*#
 echo Screen size: `tput cols`x`tput lines`
