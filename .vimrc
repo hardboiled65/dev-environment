@@ -25,6 +25,11 @@ if exists('+colorcolumn')
 endif
 
 """"""""""""""""""""""""
+""     Filetype
+""""""""""""""""""""""""
+au BufNewFile,BufRead *.ejs set filetype=html
+
+""""""""""""""""""""""""
 ""     Addons
 """"""""""""""""""""""""
 if filereadable(expand("~/.vim/autoload/pathogen.vim"))
