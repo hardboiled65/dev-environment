@@ -112,10 +112,22 @@ fi
 
 #*-          Prompt          -*#
 # PS1='[-]\e[01;41m\e[37m\h\e[00m\e[01;32m[--( \e[01;36m\w\e[01;32m )--]\e[m \@ \n └ \u $ '
+# hashing hostname
+name=`hostname`
+len=${#name}
+hsh=0
+for (( i=0; i<len; i++ )); do
+	ch=${name:$i:1}
+	ascii=`printf "%d" "'$ch"`
+	eq="$ascii + ($hsh * 64) + ($hsh * 65536) - $hsh"
+	hsh=`echo "$eq" |bc`
+done
+hsh=$((hsh % 256))
+
 CLOCK_FG='\[\e[38;5;233m\]'
 CLOCK_BG='\[\e[48;5;15m\]'
 USER_FG='\[\e[38;5;119m\]'
-HOST_FG='\[\e[38;5;207m\]'
+HOST_FG="\[\e[38;5;${hsh}m\]"
 DIR_FG='\[\e[38;5;123m\]'
 BOLD='\[\e[1m\]'
 BLINK='\[\e[5m\]'
