@@ -21,7 +21,7 @@ colorscheme elflord
 hi Comment cterm=bold
 
 if exists('+colorcolumn')
-	set colorcolumn=81
+	au BufNewFile,BufRead *.\(h\|c\|cpp\|py\|js\|rs\) set colorcolumn=81
 endif
 
 """"""""""""""""""""""""
