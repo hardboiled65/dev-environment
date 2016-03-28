@@ -123,6 +123,7 @@ for (( i=0; i<len; i++ )); do
 	ascii=`printf "%d" "'$ch"`
 	eq="$ascii + ($hsh * 64) + ($hsh * 65536) - $hsh"
 	hsh=`echo "$eq" |bc`
+	hsh=$((hsh % 4294967296)) # treat hsh as a unsigned 32-bit integer
 done
 hsh=$((hsh % 256))
 
