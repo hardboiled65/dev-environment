@@ -162,9 +162,6 @@ alias chx='chmod +x'
 alias cpuinfo='sudo dmidecode --type Processor'
 
 #*-           Helps          -*#
-HELPME="helpme - self defined help\n\
-\n\
-[ Count lines of source codes ]\n\
-find . -name \"*\" | xargs wc -l\n"
+HELPME=`cat ~/.misc/helpmefile`
 
-alias helpme='echo -e $HELPME'
+alias helpme='echo "$HELPME"'
