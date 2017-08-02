@@ -4,7 +4,7 @@ alias dfg='df --block-size=G'
 alias dfh='df -h'
 alias lsd='ls' # protect typing miss
 
-if [[ "$UNAME" -eq 'Darwin' ]]; then
+if [[ "$UNAME" == 'Darwin' ]]; then
 	alias ls='ls -G'
 fi
 
