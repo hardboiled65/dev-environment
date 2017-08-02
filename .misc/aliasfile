@@ -1,0 +1,16 @@
+UNAME=`uname -s`
+
+alias dfg='df --block-size=G'
+alias dfh='df -h'
+alias lsd='ls' # protect typing miss
+
+if [[ "$UNAME" -eq 'Darwin' ]]; then
+	alias ls='ls -G'
+fi
+
+alias tocp949='iconv -f "utf-8" -t "cp949"'
+alias toutf8='iconv -f "cp949" -t "utf-8"'
+
+alias chx='chmod +x'
+
+alias cpuinfo='sudo dmidecode --type Processor'

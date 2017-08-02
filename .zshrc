@@ -83,3 +83,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#*-     Startup message      -*#
+echo Screen size: `tput cols`x`tput lines`
+
+#*-          Aliases         -*#
+source ~/.misc/aliasfile
+
+#*-           Helps          -*#
+HELPME=`cat ~/.misc/helpmefile`
+
+alias helpme='echo "$HELPME"'
