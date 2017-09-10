@@ -14,3 +14,5 @@ alias toutf8='iconv -f "cp949" -t "utf-8"'
 alias chx='chmod +x'
 
 alias cpuinfo='sudo dmidecode --type Processor'
+
+alias vi='vim'
