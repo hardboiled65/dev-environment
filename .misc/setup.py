@@ -18,9 +18,10 @@ OH_MY_ZSH_WGET = 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/o
 # Sublime Text 3 settings.
 print_intro('Sublime Text 3')
 
-subl_fname = 'Preferences.sublime-settings'
+subl_fnames = os.listdir('sublime/')
+subl_settings = 'Preferences.sublime-settings'
 confirm = 'n'
-if subl_fname in os.listdir(SUBLIME_SETTINGS_PATH + '/Packages/User'):
+if subl_settings in os.listdir(SUBLIME_SETTINGS_PATH + '/Packages/User'):
     print('The settings file is already exists.')
     confirm = input('Override? [y/N]: ')
     if confirm not in ('y', 'Y'):
@@ -31,8 +32,9 @@ else:
         confirm = 'y' # Default value is `Y`.
 if confirm.lower() == 'y':
     print('Copying settings file ...')
-    shutil.copy('./' + subl_fname,
-        SUBLIME_SETTINGS_PATH + '/Packages/User/' + subl_fname)
+    for subl_fname in subl_fnames:
+        shutil.copy('./sublime/' + subl_fname,
+            SUBLIME_SETTINGS_PATH + '/Packages/User/' + subl_fname)
     print_done()
 else:
     print_done()
