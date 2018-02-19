@@ -1,0 +1,4 @@
+[
+    { "caption": "Example", "command": "example" },
+    { "caption": "CShortBanner", "command": "c_short_banner" },
+]
