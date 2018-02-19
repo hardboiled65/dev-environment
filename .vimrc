@@ -8,6 +8,7 @@ set nu
 set smartindent
 set shiftwidth=4
 set laststatus=2	" Always show filename
+set softtabstop=4
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
