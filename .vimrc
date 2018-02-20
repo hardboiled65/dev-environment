@@ -15,6 +15,8 @@ ab sf scanf(
 ab im int main(){
 ab rt0 return 0;
 
+autocmd Filetype html setlocal ts=2 softtabstop=2
+
 """"""""""""""""""""""""
 ""     Themes
 """"""""""""""""""""""""
