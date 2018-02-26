@@ -16,6 +16,10 @@ ab im int main(){
 ab rt0 return 0;
 
 autocmd Filetype html setlocal ts=2 softtabstop=2
+" reopening a file for old versions - from /etc/vim/vimrc
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 """"""""""""""""""""""""
 ""     Themes
