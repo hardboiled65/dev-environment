@@ -9,6 +9,8 @@ def print_done():
 paths = {'SUBLIME_SETTINGS': ''}
 if sys.platform in ('win32', 'cygwin'):
     paths['SUBLIME_SETTINGS'] = 'c:' + os.getenv('HOMEPATH') + '/AppData/Roaming/Sublime Text 3'
+elif sys.platform in ('linux'):
+    paths['SUBLIME_SETTINGS'] = os.getenv('HOME') + '/.config/sublime-text-3'
 ZSH_INSTALLED = True if shutil.which('zsh') is not None else False
 CURL_INSTALLED = True if shutil.which('curl') is not None else False
 WGET_INSTALLED = True if shutil.which('wget') is not None else False
