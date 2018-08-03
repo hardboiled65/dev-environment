@@ -1,0 +1,32 @@
+<application>
+  <component name="DimensionService">
+    <location key="WELCOME_SCREEN.0.0.1920.1080" x="992" y="466" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.1920.1080" x="594" y="371" />
+    <location key="SettingsEditor.0.0.1920.1080" x="556" y="161" />
+    <location key="FileChooserDialogImpl.0.0.1920.1080" x="879" y="391" />
+    <location key="#Inspections.0.0.1920.1080" x="632" y="216" />
+    <location key="find.popup.0.0.1920.1080" x="701" y="115" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1920.1080" x="523" y="198" />
+    <location key="Vcs.Push.Dialog.0.0.1920.1080" x="677" y="246" />
+    <location key="com.intellij.database.view.ui.DbObjectDialog.0.0.1920.1080" x="853" y="379" />
+    <location key="com.intellij.database.view.ui.DeleteDialog.0.0.1920.1080" x="802" y="24" />
+    <location key="com.intellij.database.dbimport.ImportDialog.0.0.1920.1080" x="580" y="190" />
+    <location key="ProcessPopupWindow.0.0.1920.1080" x="1349" y="955" />
+    <location key="DUMP_DIALOG_DIMENSION_KEY.0.0.1920.1080" x="680" y="340" />
+    <location key="#dev.0.0.1920.1080" x="635" y="124" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1807" height="352" />
+    <size key="find.popup.0.0.1920.1080" width="870" height="716" />
+    <size key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1920.1080" width="1071" height="781" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1807" height="352" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1080" width="1807" height="352" />
+    <size key="HiddenNamespacesPopup.0.0.1920.1080" width="294" height="504" />
+    <size key="SettingsEditor.0.0.1920.1080" width="1096" height="719" />
+    <size key="ProcessPopupWindow.0.0.1920.1080" width="400" height="124" />
+    <size key="com.intellij.database.dbimport.ImportDialog.0.0.1920.1080" width="1069" height="690" />
+  </component>
+</application>

@@ -1,0 +1,39 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="Copy.OpenInEditor" value="true" />
+    <property name="Darcula.savedEditorTheme" value="_@user_Darcula" />
+    <property name="Default.savedEditorTheme" value="_@user_Default" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="KEYMAP" value="select&#10;rename&#10;scra&#10;caret&#10;reformat" />
+    <property name="LayoutCode.optimizeImports" value="true" />
+    <property name="LayoutCode.processChangedText" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+    <property name="OpenOrAttachDialog.OpenMode" value="new" />
+    <property name="PG_DUMP_CLI_PACK_LAST_USED_CONFIGURATION" value="PG_DUMP_PROPERTIES" />
+    <property name="PG_DUMP_PROPERTIES_COMMAND" value="--dbname=launchpack --schema='public' --table=public.&quot;ui_brand&quot; --table=public.&quot;ui_colortheme&quot; --table=public.&quot;ui_formtheme&quot; --table=public.&quot;ui_page&quot; --file=&quot;/home/launchpack-dev2/projects/Launchpack_Backend_New/dump.sql&quot;" />
+    <property name="PG_DUMP_PROPERTIES_EXPANDED" value="true" />
+    <property name="PG_DUMP_PROPERTIES_PATH" value="/usr/bin/pg_dump" />
+    <property name="PG_DUMP_PROPERTIES_VARIANTS_1694034474" value="-f --file= -F --format= -j --jobs= -v --verbose -V --version -Z --compress= --lock-wait-timeout= --help -a --data-only -b --blobs -c --clean -C --create -E --encoding= -n --schema= -N --exclude-schema= -o --oids -O --no-owner -s --schema-only -S --superuser= -t --table= -T --exclude-table= -x --no-privileges --binary-upgrade --column-inserts --disable-dollar-quoting --disable-triggers --enable-row-security --exclude-table-data= --if-exists --inserts --no-security-labels --no-synchronized-snapshots --no-tablespaces --no-unlogged-table-data --quote-all-identifiers --section= --serializable-deferrable --snapshot= --use-set-session-authorization -d --dbname= -h --host= -p --port= -U --username= -w --no-password -W --password --role= &lt;" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="PyCharm.InitialConfiguration.V6" value="true" />
+    <property name="PyCharm.InitialConfiguration.V7" value="true" />
+    <property name="PyCharm.initialConfigurationShown" value="true" />
+    <property name="SearchEveryWhereHistory" value="_m&#10;ui&#10;,&#10;main" />
+    <property name="com.intellij.database.view.ui.DeleteDialog.previewExpanded" value="true" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
+    <property name="evlsprt3.181" value="17" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/projects/MasterPack_Backend/django_app/config/settings/debug.py&#10;/home/launchpack-dev2/projects/MasterPack_Backend/django_app/manage.py&#10;/home/launchpack-dev2/projects/MasterPack_Backend/.config_secret/settings_debug.json&#10;/home/launchpack-dev2/projects/MasterPack_Backend&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/launchpack_public_ui_formtheme.sql&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/launchpack_public_ui_formtheme.csv&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/launchpack_public_ui_page.csv&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/launchpack_public_ui_pagegroup.csv&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/django_app/config/settings/debug.py&#10;/home/launchpack-dev2/.pyenv/versions/launchpack_backend_new_env/bin/python&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/django_app/config/settings/base.py&#10;/home/launchpack-dev2/projects/Launchpack_Backend_New/django_app&#10;/home/launchpack-dev2/projects/Launchpack_backend_new/django_app/config/settings/base.py&#10;/home/launchpack-dev2/projects/Launchpack_backend_new/django_app&#10;/home/launchpack-dev2/.pyenv/versions/launchpack_backend_env/bin/python" />
+    <property name="file.gist.reindex.count" value="186977" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="ideavim.statistics.timestamp" value="1524452553116" />
+    <property name="import_modality_state" value="false" />
+    <property name="lastTip" value="56" />
+    <property name="ts.lib.d.ts.version" value="2.8.1" />
+  </component>
+</application>

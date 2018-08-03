@@ -1,0 +1,80 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/projects/MasterPack_Backend" />
+        <option value="$USER_HOME$/projects/Launchpack_Backend_New" />
+        <option value="$USER_HOME$/projects/Launchpack_backend" />
+        <option value="$USER_HOME$/projects/Launchpack_backend_new" />
+        <option value="$USER_HOME$/PycharmProjects/hellopycharm" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/projects/MasterPack_Backend" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/projects/MasterPack_Backend" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/PycharmProjects/hellopycharm">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-181.4445.76" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1524489384070" />
+              <option name="buildTimestamp" value="1523292141019" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/projects/Launchpack_Backend_New">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-181.4445.76" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1533226265771" />
+              <option name="buildTimestamp" value="1523292132245" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/projects/Launchpack_backend">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-181.4445.76" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1529045196640" />
+              <option name="buildTimestamp" value="1523292159758" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/projects/Launchpack_backend_new">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-181.4445.76" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1525407190864" />
+              <option name="buildTimestamp" value="1523292147505" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/projects/MasterPack_Backend">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-181.4445.76" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1533260139152" />
+              <option name="buildTimestamp" value="1523292121270" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects" />
+  </component>
+</application>
