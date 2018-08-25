@@ -9,6 +9,7 @@ set smartindent
 set shiftwidth=4
 set laststatus=2	" Always show filename
 set softtabstop=4
+set list listchars=trail:·,tab:->,space:·
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
@@ -30,6 +31,12 @@ hi Comment cterm=bold
 if exists('+colorcolumn')
 	au BufNewFile,BufRead *.\(h\|c\|cpp\|py\|js\|rs\) set colorcolumn=81
 endif
+
+""""""""""""""""""""""""
+""     Highlights
+""""""""""""""""""""""""
+highlight WhiteSpace ctermfg=darkgrey
+match WhiteSpace /\s/
 
 """"""""""""""""""""""""
 ""     Filetype
