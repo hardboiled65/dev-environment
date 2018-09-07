@@ -87,10 +87,17 @@ source $ZSH/oh-my-zsh.sh
 #*-     Startup message      -*#
 echo Screen size: `tput cols`x`tput lines`
 
+#*-  Finding dev-environment -*#
+if [ -d "dev-environment" ]; then
+    HARDB_DEV_ENVIRONMENT=~/dev-environment
+else
+    HARDB_DEV_ENVIRONMENT=~
+fi
+
 #*-          Aliases         -*#
-source ~/.misc/aliasfile
+source $HARDB_DEV_ENVIRONMENT/.misc/aliasfile
 
 #*-           Helps          -*#
-HELPME=`cat ~/.misc/helpmefile`
+HELPME=`cat $HARDB_DEV_ENVIRONMENT/.misc/helpmefile`
 
 alias helpme='echo "$HELPME"'
