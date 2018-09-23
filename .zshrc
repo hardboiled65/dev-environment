@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 echo Screen size: `tput cols`x`tput lines`
 
 #*-  Finding dev-environment -*#
-if [ -d "dev-environment" ]; then
+if [ -d "$HOME/dev-environment" ]; then
     HARDB_DEV_ENVIRONMENT=~/dev-environment
 else
     HARDB_DEV_ENVIRONMENT=~
