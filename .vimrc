@@ -10,7 +10,7 @@ set shiftwidth=4
 set laststatus=2	" Always show filename
 set softtabstop=4
 if v:version > 703
-	set list listchars=trail:·,tab:->,space:·
+	set list listchars=trail:^,tab:->,space:^
 endif
 ab Inc #include 
 ab pf printf(
