@@ -101,3 +101,9 @@ source $HARDB_DEV_ENVIRONMENT/.misc/aliasfile
 HELPME=`cat $HARDB_DEV_ENVIRONMENT/.misc/helpmefile`
 
 alias helpme='echo "$HELPME"'
+
+#*-         Local rc         -*#
+if [ -f "$HOME/.zshrc.local" ]; then
+	source $HOME/.zshrc.local
+fi
+
