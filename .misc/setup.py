@@ -3,14 +3,31 @@ import os, sys, shutil
 
 def print_intro(msg):
     print('=== {} ==='.format(msg))
+
 def print_done():
     print('Done.\n')
+
+def confirm(text, default_yes=False):
+    select_text = '[y/N]'
+    if default_yes:
+        select_text = '[Y/n]'
+    input_text = input('{} {}: '.format(text, select_text))
+    if input_text == '' and not default_yes:
+        input_text = 'n'
+    # elif input_text == '' and default_yes:
+    else:
+        input_text = 'y'
+    input_text = input_text.lower()
+    if input_text in ('y', 'yes',):
+        return True
+    return False
 
 paths = {'SUBLIME_SETTINGS': ''}
 if sys.platform in ('win32', 'cygwin'):
     paths['SUBLIME_SETTINGS'] = 'c:' + os.getenv('HOMEPATH') + '/AppData/Roaming/Sublime Text 3'
 elif sys.platform in ('linux'):
     paths['SUBLIME_SETTINGS'] = os.getenv('HOME') + '/.config/sublime-text-3'
+
 ZSH_INSTALLED = True if shutil.which('zsh') is not None else False
 CURL_INSTALLED = True if shutil.which('curl') is not None else False
 WGET_INSTALLED = True if shutil.which('wget') is not None else False
@@ -22,18 +39,16 @@ print_intro('Sublime Text 3')
 
 subl_fnames = os.listdir('sublime/')
 subl_settings = 'Preferences.sublime-settings'
-confirm = 'n'
 if os.path.isdir(paths['SUBLIME_SETTINGS']):
     if subl_settings in os.listdir(paths['SUBLIME_SETTINGS'] + '/Packages/User'):
         print('The settings file is already exists.')
-        confirm = input('Override? [y/N]: ')
-        if confirm not in ('y', 'Y'):
-            confirm = 'n' # Default value is `N`.
+        if confirm('Override?') is not True:
+            confirm_input = 'n' # Default value is `N`.
     else:
         confirm = input('Install? [Y/n]: ')
-        if confirm not in ('n', 'N'):
-            confirm = 'y' # Default value is `Y`.
-    if confirm.lower() == 'y':
+        if confirm('Install?', default_yes=True) is not False:
+            confirm_input = 'y' # Default value is `Y`.
+    if confirm_input.lower() == 'y':
         print('Copying settings file ...')
         for subl_fname in subl_fnames:
             shutil.copy('./sublime/' + subl_fname,
@@ -56,10 +71,7 @@ if ZSH_INSTALLED:
     elif not os.path.isdir(os.getenv('ZSH')):
         # Not installed.
         print('Oh My Zsh is not installed.')
-        confirm = input('Install? [Y/n]: ')
-        if confirm not in ('n', 'N'):
-            confirm = 'y' # Default value is `Y`
-        if confirm.lower() == 'y':
+        if confirm('Install?', default_yes=True):
             install_cmd = ''
             if CURL_INSTALLED:
                 install_cmd = OH_MY_ZSH_CURL
