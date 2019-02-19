@@ -95,10 +95,10 @@ else
 fi
 
 #*-          Aliases         -*#
-source $HARDB_DEV_ENVIRONMENT/.misc/aliasfile
+source $HARDB_DEV_ENVIRONMENT/sh/aliasfile
 
 #*-           Helps          -*#
-HELPME=`cat $HARDB_DEV_ENVIRONMENT/.misc/helpmefile`
+HELPME=`cat $HARDB_DEV_ENVIRONMENT/sh/helpmefile`
 
 alias helpme='echo "$HELPME"'
 
