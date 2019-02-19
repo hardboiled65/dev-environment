@@ -1,5 +1,6 @@
 syntax on
 set ruler
+set showtabline=2	" Always show tabline
 
 au Bufenter *.\(c\|cpp\|h\|html\|css\|php\|ejs\|py\|rs\) set et
 set ts=4
@@ -56,8 +57,10 @@ endif
 ""     Mapping
 """"""""""""""""""""""""
 :map \\ :set number!<CR>
-:map \[ :tabp<CR>			" Move to previous tab
-:map \] :tabn<CR>			" Move to next tab
+" Move to previous tab
+:map \[ :tabp<CR>
+" Move to next tab
+:map \] :tabn<CR>
 
 """"""""""""""""""""""""
 ""     Functions
