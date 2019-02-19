@@ -40,6 +40,9 @@ endif
 """"""""""""""""""""""""
 highlight WhiteSpace ctermfg=darkgrey
 match WhiteSpace /\s/
+highlight TabLineFill ctermfg=grey
+highlight TabLine ctermfg=black ctermbg=grey
+highlight TabLineSel ctermfg=white ctermbg=black
 
 """"""""""""""""""""""""
 ""     Filetype
