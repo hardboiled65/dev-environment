@@ -22,7 +22,10 @@ def confirm(text, default_yes=False):
         return True
     return False
 
-paths = {'SUBLIME_SETTINGS': ''}
+paths = {
+    'SUBLIME_SETTINGS': '',
+    'VIMRC': (os.getenv('HOME') + '/.vimrc'),
+}
 if sys.platform in ('win32', 'cygwin'):
     paths['SUBLIME_SETTINGS'] = 'c:' + os.getenv('HOMEPATH') + '/AppData/Roaming/Sublime Text 3'
 elif sys.platform in ('linux'):
@@ -34,10 +37,26 @@ WGET_INSTALLED = True if shutil.which('wget') is not None else False
 OH_MY_ZSH_CURL = 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
 OH_MY_ZSH_WGET = 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
 
+# VIM config.
+print_intro('VIM')
+
+if os.path.islink(paths['VIMRC']):
+    print('.vimrc file is already linked.')
+    print_done()
+
+if not os.path.islink(paths['VIMRC']) and confirm('Install?', default_yes=True):
+    if os.path.isfile(paths['VIMRC']):
+        print('.vimrc file already exists.')
+        if confirm('Do you want to make backup?', default_yes=True):
+            shutil.move(paths['VIMRC'], paths['VIMRC'] + '.old')
+            print('file moved: .vimrc => .vimrc.old')
+    os.symlink('dev-environment/vimrc', paths['VIMRC'])
+    print_done()
+
 # Sublime Text 3 settings.
 print_intro('Sublime Text 3')
 
-subl_fnames = os.listdir('sublime/')
+subl_fnames = os.listdir('.misc/sublime/')
 subl_settings = 'Preferences.sublime-settings'
 if os.path.isdir(paths['SUBLIME_SETTINGS']):
     if subl_settings in os.listdir(paths['SUBLIME_SETTINGS'] + '/Packages/User'):
@@ -45,13 +64,12 @@ if os.path.isdir(paths['SUBLIME_SETTINGS']):
         if confirm('Override?') is not True:
             confirm_input = 'n' # Default value is `N`.
     else:
-        confirm = input('Install? [Y/n]: ')
         if confirm('Install?', default_yes=True) is not False:
             confirm_input = 'y' # Default value is `Y`.
     if confirm_input.lower() == 'y':
         print('Copying settings file ...')
         for subl_fname in subl_fnames:
-            shutil.copy('./sublime/' + subl_fname,
+            shutil.copy('.misc/sublime/' + subl_fname,
                 paths['SUBLIME_SETTINGS'] + '/Packages/User/' + subl_fname)
         print_done()
     else:
