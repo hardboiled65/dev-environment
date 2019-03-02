@@ -19,6 +19,7 @@ ab sf scanf(
 ab im int main(){
 ab rt0 return 0;
 
+autocmd Bufenter *.\(js\) setlocal expandtab ts=2 softtabstop=2
 autocmd Filetype html setlocal ts=2 softtabstop=2
 " reopening a file for old versions - from /etc/vim/vimrc
 if has("autocmd")
