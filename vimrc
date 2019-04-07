@@ -83,7 +83,7 @@ endfunction
 function MakeCHeaderComment()
 	let filename=expand('%:t')
 	let c_date=system('python3 -c "import time; print(time.strftime(\"%Y. %m. %d. %H:%M\", time.localtime()), end=\"\")"')
-	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Copyright (c) 2018 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
+	let template="/*\n//  " . filename . "\n//\n" . "//  Author:     <OWNER>\n" . "//  Created:    " . c_date . "\n" . "//  Copyright (c) 2019 <OWNER>. All rights reserved.\n" . "//\n" . "//\n" . "*/"
 	return template
 endfunction
 " MakeCExternCStart: Return extern C with __cplusplus def
