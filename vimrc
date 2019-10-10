@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 syntax on
 set ruler
 set showtabline=2	" Always show tabline
@@ -10,6 +13,7 @@ set smartindent
 set shiftwidth=4
 set laststatus=2	" Always show filename
 set softtabstop=4
+
 if v:version > 703
 	try
 		set list listchars=trail:·,tab:->,space:·
