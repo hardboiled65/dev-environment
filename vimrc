@@ -82,7 +82,7 @@ endif
 " MakeCGuard: Return C header guard format by filename
 function MakeCGuard()
 	let filename=expand('%:t')
-	let guard=system('python3 -c "print(\"_' . filename . '\".upper().replace(\".\", \"_\"), end=\"\")"')
+	let guard=system('python3 -c "print(\"_' . filename . '\".upper().replace(\".\", \"_\").replace(\"-\", \"_\"), end=\"\")"')
 	return guard " ex) _HEADER_H
 endfunction
 " MakeCHeaderComment: Return C header comment template
