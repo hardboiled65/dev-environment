@@ -22,6 +22,64 @@ def confirm(text, default_yes=False):
         return True
     return False
 
+def unix_home():
+    return os.getenv('HOME')
+
+def windows_home():
+    homepath = os.getenv('HOMEPATH')
+    if homepath is None:
+        homepath = ''
+    return 'c:' + homepath
+
+PLATFORM = ''
+if sys.platform in ('win32', 'cygwin'):
+    PLATFORM = 'windows'
+elif sys.platform in ('linux'):
+    PLATFORM = 'linux'
+else:
+    PLATFORM = 'macos'
+
+PLATFORM_HOME = ''
+if PLATFORM == 'windows':
+    PLATFORM_HOME = windows_home()
+else:
+    PLATFORM_HOME = unix_home()
+
+settings = {
+    'vim': {
+        'directory': {
+            'linux': unix_home(),
+            'macos': unix_home(),
+            'windows': '',
+        },
+    },
+    'zsh': {},
+    'sublime3': {
+        'directory': {
+            'linux': os.path.join(unix_home(), '.config/sublime-text-3'),
+            'macos': unix_home(),
+            'windows': os.path.join(windows_home(), 'AppData/Roaming/Subline Text 3'),
+        },
+    },
+    'vscode': {
+        'directory': {
+            'linux': os.path.join(unix_home(), '.config/Code/User'),
+            'macos': '',
+            'windows': '',
+        },
+        'files': [
+            {
+                'source': '.misc/vscode/settings.json',
+                'target': 'settings.json',
+            },
+            {
+                'source': '.misc/vscode/keybindings.json',
+                'target': 'keybindings.json',
+            },
+        ],
+    },
+}
+
 paths = {
     'SUBLIME_SETTINGS': '',
     'VIMRC': (os.getenv('HOME') + '/.vimrc'),
@@ -129,8 +187,13 @@ if not os.path.islink(vscode_settings_json) and \
         not os.path.isfile(vscode_settings_json):
     # Not linked, file not exists.
     if confirm('Install?', default_yes=True):
-        os.symlink(os.getenv('HOME') + '/dev-environment/.misc/vscode/settings.json',
-            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'))
+        for setting_file in settings['vscode']['files']:
+            source_dir = os.path.join(PLATFORM_HOME, 'dev-environment')
+            target_dir = settings['vscode']['directory'][PLATFORM]
+            os.symlink(
+                os.path.join(source_dir, setting_file['source']),
+                os.path.join(PLATFORM_HOME, target_dir, setting_file['target'])
+            )
         print_done()
     else:
         print('Aborted.\n')
