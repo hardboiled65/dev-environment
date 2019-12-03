@@ -25,11 +25,13 @@ def confirm(text, default_yes=False):
 paths = {
     'SUBLIME_SETTINGS': '',
     'VIMRC': (os.getenv('HOME') + '/.vimrc'),
+    'VSCODE_SETTINGS': '',
 }
 if sys.platform in ('win32', 'cygwin'):
     paths['SUBLIME_SETTINGS'] = 'c:' + os.getenv('HOMEPATH') + '/AppData/Roaming/Sublime Text 3'
 elif sys.platform in ('linux'):
     paths['SUBLIME_SETTINGS'] = os.getenv('HOME') + '/.config/sublime-text-3'
+    paths['VSCODE_SETTINGS'] = os.getenv('HOME') + '/.config/Code'
 
 ZSH_INSTALLED = True if shutil.which('zsh') is not None else False
 CURL_INSTALLED = True if shutil.which('curl') is not None else False
@@ -113,3 +115,40 @@ if ZSH_INSTALLED:
 else:
     print('zsh is not installed yet.')
     print('Aborted.\n')
+
+# VSCode settings.
+print_intro('VSCode')
+
+vscode_settings_json = os.path.join(paths['VSCODE_SETTINGS'],
+    'User/settings.json')
+if os.path.islink(vscode_settings_json):
+    print('settings.json file is already linked.')
+    print_done()
+
+if not os.path.islink(vscode_settings_json) and \
+        not os.path.isfile(vscode_settings_json):
+    # Not linked, file not exists.
+    if confirm('Install?', default_yes=True):
+        os.symlink(os.getenv('HOME') + '/dev-environment/.misc/vscode/settings.json',
+            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'))
+        print_done()
+    else:
+        print('Aborted.\n')
+elif not os.path.islink(vscode_settings_json) and \
+        os.path.isfile(vscode_settings_json):
+    # Not linked, file exists.
+    if confirm('Local file exists. Override?', default_yes=False):
+        shutil.move(
+            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'),
+            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.old.json')
+        )
+        shutil.move(paths['VIMRC'], paths['VIMRC'] + '.old')
+        os.symlink(os.getenv('HOME') + '/dev-environment/.misc/vscode/settings.json',
+            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'))
+        print_done()
+    else:
+        print('Aborted.\n')
+elif not os.path.isdir(paths['VSCODE_SETTINGS']):
+    print('It seems VSCode is not installed in this system.')
+    print_done()
+
