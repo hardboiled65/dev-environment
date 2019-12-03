@@ -201,13 +201,18 @@ elif not os.path.islink(vscode_settings_json) and \
         os.path.isfile(vscode_settings_json):
     # Not linked, file exists.
     if confirm('Local file exists. Override?', default_yes=False):
-        shutil.move(
-            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'),
-            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.old.json')
-        )
-        shutil.move(paths['VIMRC'], paths['VIMRC'] + '.old')
-        os.symlink(os.getenv('HOME') + '/dev-environment/.misc/vscode/settings.json',
-            os.path.join(paths['VSCODE_SETTINGS'], 'User/settings.json'))
+        for setting_file in settings['vscode']['files']:
+            source_dir = os.path.join(PLATFORM_HOME, 'dev-environment')
+            target_dir = settings['vscode']['directory'][PLATFORM]
+            # Backup current files.
+            shutil.move(
+                os.path.join(target_dir, setting_file['target'])
+                os.path.join(target_dir, setting_file['target'] + '.old')
+            )
+            os.symlink(
+                os.path.join(source_dir, setting_file['source']),
+                os.path.join(PLATFORM_HOME, target_dir, setting_file['target'])
+            )
         print_done()
     else:
         print('Aborted.\n')
