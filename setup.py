@@ -206,7 +206,7 @@ elif not os.path.islink(vscode_settings_json) and \
             target_dir = settings['vscode']['directory'][PLATFORM]
             # Backup current files.
             shutil.move(
-                os.path.join(target_dir, setting_file['target'])
+                os.path.join(target_dir, setting_file['target']),
                 os.path.join(target_dir, setting_file['target'] + '.old')
             )
             os.symlink(
