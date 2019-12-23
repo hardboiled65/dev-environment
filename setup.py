@@ -12,12 +12,13 @@ def confirm(text, default_yes=False):
     if default_yes:
         select_text = '[Y/n]'
     input_text = input('{} {}: '.format(text, select_text))
+    input_text = input_text.lower()
+    # Set default input.
     if input_text == '' and not default_yes:
         input_text = 'n'
-    # elif input_text == '' and default_yes:
-    else:
+    elif input_text == '' and default_yes:
         input_text = 'y'
-    input_text = input_text.lower()
+
     if input_text in ('y', 'yes',):
         return True
     return False
