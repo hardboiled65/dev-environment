@@ -1,6 +1,9 @@
 {
     "window.zoomLevel": 0,
-    "editor.fontSize": 16,
     "editor.minimap.showSlider": "always",
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "workbench.colorTheme": "Monokai",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "editor.rulers": [80]
 }
