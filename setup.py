@@ -143,11 +143,11 @@ else:
 print_intro('Oh My Zsh')
 
 if ZSH_INSTALLED:
-    if os.getenv('ZSH') is None:
+    if os.getenv('SHELL').find('zsh') < 0:
         print('It seems zsh is not current shell.')
         print('Try again with zsh.')
         print('Aborted.\n')
-    elif not os.path.isdir(os.getenv('ZSH')):
+    elif not os.path.isdir(os.path.join(os.getenv('HOME'), '.oh-my-zsh')):
         # Not installed.
         print('Oh My Zsh is not installed.')
         if confirm('Install?', default_yes=True):
