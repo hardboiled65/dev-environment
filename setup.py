@@ -65,7 +65,7 @@ settings = {
     'vscode': {
         'directory': {
             'linux': os.path.join(unix_home(), '.config/Code/User'),
-            'macos': '',
+            'macos': os.path.join(unix_home(), 'Library/Application Support/Code/User'),
             'windows': '',
         },
         'files': [
