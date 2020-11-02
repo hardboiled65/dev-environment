@@ -1,11 +1,11 @@
 helpme - self defined help
 
-[ Show which syntax highlighting current file ]
+[ VIM: Show which syntax highlighting current file ]
 :setlocal syntax?
 
-[ Count lines of source codes ]
+[ VIM: Count lines of source codes ]
 find . -name "*" | xargs wc -l
 
-[ Using vi as a hex editor ]
+[ VIM: Using vi as a hex editor ]
 :%!xxd      - to hex mode
 :%!xxd -r   - return to text mode
