@@ -1,0 +1,2 @@
+export SWAYSOCK=/run/user/1000/sway-ipc.1000.33499.sock
+swaymsg -t get_outputs
