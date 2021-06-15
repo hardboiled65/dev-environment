@@ -157,7 +157,7 @@ if ZSH_INSTALLED:
             elif WGET_INSTALLED:
                 install_cmd = OH_MY_ZSH_WGET
 
-            if install_cmd is not '':
+            if install_cmd != '':
                 cmd = 'cd ~ ; ' + install_cmd
                 os.system(cmd)
                 print_done()
