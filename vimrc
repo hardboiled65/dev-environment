@@ -24,7 +24,7 @@ endif
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
-ab im int main(){
+ab im int main(int argc, char *argv[]){
 ab rt0 return 0;
 
 autocmd Bufenter *.\(js\) setlocal expandtab ts=2 softtabstop=2
