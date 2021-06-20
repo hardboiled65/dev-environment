@@ -5,13 +5,16 @@ personal dotfiles and other config files for unix
 Files
 -----
 
-### .bashrc
+### bashrc
 for bash shell
 
-### .vimrc
+### zshrc
+for zsh
+
+### vimrc
 for vim
 
-### .misc/
+### misc/
 not always used. however, the files may needed some specific situations
 
 ### prompt.sh
