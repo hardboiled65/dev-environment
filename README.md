@@ -22,3 +22,10 @@ not always used. however, the files may needed some specific situations
 
 ### manual/
 Various manuals as plain text file
+
+Installation
+------------
+
+```sh
+$ ./setup.py
+```
