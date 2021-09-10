@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -x "$(command -v cargo)" ]; then
+	echo "Rust is already installed!"
+	exit 1
+fi
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
