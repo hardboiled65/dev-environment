@@ -102,6 +102,9 @@ HELPME=`cat $HARDB_DEV_ENVIRONMENT/sh/helpmefile`
 
 alias helpme='echo "$HELPME"'
 
+#*-        Executables       -*#
+export PATH=$PATH:$HARDB_DEV_ENVIRONMENT/bin
+
 #*-         Local rc         -*#
 if [ -f "$HOME/.zshrc.local" ]; then
 	source $HOME/.zshrc.local
