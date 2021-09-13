@@ -9,7 +9,9 @@ Files
 for bash shell
 
 ### zshrc
-for zsh
+for zsh. Symlink to `~/.zshrc`.
+
+For local environments, create `~/.zshrc.local` file.
 
 ### vimrc
 for vim
@@ -22,6 +24,9 @@ not always used. however, the files may needed some specific situations
 
 ### manual/
 Various manuals as plain text file
+
+### bin/
+Useful executable files
 
 Installation
 ------------
