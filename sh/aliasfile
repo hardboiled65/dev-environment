@@ -16,4 +16,6 @@ alias chx='chmod +x'
 
 alias cpuinfo='sudo dmidecode --type Processor'
 
-alias vi='vim'
+if [ -x "$(command -v vim)" ]; then
+	alias vi='vim'
+fi
