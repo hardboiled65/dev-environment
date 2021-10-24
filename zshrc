@@ -9,6 +9,10 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="hardboiled"
 
+# Rehash for new added bin in PATH.
+# https://superuser.com/a/1089956
+zstyle ':completion:*' rehash true
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
