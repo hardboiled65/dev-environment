@@ -21,6 +21,8 @@ if v:version > 703
 		set list listchars=trail:^,tab:->,space:^
 	endtry
 endif
+
+# Common code snippets.
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
