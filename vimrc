@@ -22,7 +22,9 @@ if v:version > 703
 	endtry
 endif
 
-# Common code snippets.
+""""""""""""""""""""""""""""
+""   Common code snippets
+""""""""""""""""""""""""""""
 ab Inc #include 
 ab pf printf(
 ab sf scanf(
