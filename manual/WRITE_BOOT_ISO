@@ -1,1 +1,1 @@
-sudo dd if=FILE.iso of=/dev/sdc bs=4M
+sudo dd if=FILE.iso of=/dev/sdX bs=4M
