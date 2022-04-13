@@ -9,3 +9,11 @@ find . -name "*" | xargs wc -l
 [ VIM: Using vi as a hex editor ]
 :%!xxd      - to hex mode
 :%!xxd -r   - return to text mode
+
+[ tmux: Basic usage ]
+tmux ls
+tmux new-session -s SESSION_NAME
+tmux attach-session -t SESSION_NAME
+<Ctrl+b><d>: Detach session.
+<Ctrl+b><">: Split pane vertically.
+<Ctrl+b><o>: Next pane.
