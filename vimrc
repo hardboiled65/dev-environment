@@ -113,6 +113,8 @@ endfunction
 """"""""""""""""""""""""
 " Cguard: Make C header guard
 command Cguard :execute "normal! i#ifndef " . MakeCGuard() . "#define " .MakeCGuard() . "#endif /* " . MakeCGuard() . " */"
+" Cxxnamespace: Make C++ namespace
+command -nargs=1 Cxxnamespace :execute "normal! inamespace " . "<args>" . " {} // namespace " . "<args>"
 " Ccomment: Make C header comment
 command Ccomment :0put=MakeCHeaderComment()
 " Cexterncstart: Make start extern C
