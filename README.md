@@ -13,6 +13,9 @@ for zsh. Symlink to `~/.zshrc`.
 
 For local environments, create `~/.zshrc.local` file.
 
+Because it uses internal theme, run `./zshtheme.sh` to install the theme
+before symlink this file.
+
 ### vimrc
 for vim
 
