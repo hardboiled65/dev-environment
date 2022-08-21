@@ -31,6 +31,10 @@ Various manuals as plain text file
 ### bin/
 Useful executable files
 
+- **path**: Print each path on one line.
+- **install-rust**: Install Rust toolchain.
+- **battery**: Print battery percentage for laptop.
+
 Installation
 ------------
 
