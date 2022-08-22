@@ -38,6 +38,8 @@ Useful executable files
 Installation
 ------------
 
+Python 3 required.
+
 ```sh
 $ ./setup.py
 ```
