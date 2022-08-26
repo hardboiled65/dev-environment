@@ -3,6 +3,9 @@ helpme - self defined help
 [ VIM: Show which syntax highlighting current file ]
 :setlocal syntax?
 
+[ VIM: Disable visible whitespaces ]
+:set nolist
+
 [ VIM: Count lines of source codes ]
 find . -name "*" | xargs wc -l
 
