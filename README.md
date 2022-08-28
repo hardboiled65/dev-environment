@@ -43,3 +43,9 @@ Python 3 required.
 ```sh
 $ ./setup.py
 ```
+
+For oh-my-zsh
+```sh
+$ export SHELL=/bin/zsh
+```
+
