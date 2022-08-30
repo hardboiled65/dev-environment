@@ -35,6 +35,9 @@ Useful executable files
 - **install-rust**: Install Rust toolchain.
 - **battery**: Print battery percentage for laptop.
 
+### Xresources
+For xterm. Symlink to ~/.Xresources
+
 Installation
 ------------
 
