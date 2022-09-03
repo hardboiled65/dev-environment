@@ -7,6 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Currently, theme "hardboiled" should installed manually. Use zshtheme.sh script.
 ZSH_THEME="hardboiled"
 
 # Rehash for new added bin in PATH.
