@@ -36,7 +36,7 @@ Useful executable files
 - **battery**: Print battery percentage for laptop.
 
 ### Xresources
-For xterm. Symlink to ~/.Xresources
+For xterm. Symlink to `~/.Xresources`
 
 Installation
 ------------
