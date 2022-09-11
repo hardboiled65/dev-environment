@@ -6,6 +6,8 @@ PERCENTAGE=`cat /sys/class/power_supply/BAT0/capacity`
 
 echo $PERCENTAGE%
 
+cat /sys/class/power_supply/BAT0/status
+
 COUNT=`python3 -c "print(int($PERCENTAGE / (100 / $MAX_WIDTH)))"`
 
 printf "["
