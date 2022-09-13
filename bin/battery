@@ -2,6 +2,11 @@
 
 MAX_WIDTH=30
 
+if [ ! -d /sys/class/power_supply/BAT0 ]; then
+	echo "Battery not exists!"
+	exit 1
+fi
+
 PERCENTAGE=`cat /sys/class/power_supply/BAT0/capacity`
 
 echo $PERCENTAGE%
