@@ -1,1 +1,2 @@
-setxkbmap -option caps:ctrl_modifier
+X11: setxkbmap -option caps:ctrl_modifier
+Wayland: ??
