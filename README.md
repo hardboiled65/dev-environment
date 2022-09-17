@@ -1,6 +1,6 @@
 dev-environment
 ===============
-personal dotfiles and other config files for unix or Linux
+personal dotfiles and other config files for UNIX or Linux
 
 Files
 -----
