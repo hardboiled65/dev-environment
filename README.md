@@ -6,7 +6,7 @@ Files
 -----
 
 ### bashrc
-for bash shell
+for bash shell. Symlink to `~/.bashrc`.
 
 ### zshrc
 for zsh. Symlink to `~/.zshrc`.
