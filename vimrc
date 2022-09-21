@@ -46,6 +46,7 @@ autocmd BufReadPost *.qml set syntax=javascript expandtab ts=2 softtabstop=2
 """"""""""""""""""""""""
 colorscheme elflord
 hi Comment cterm=bold
+hi Normal ctermbg=None
 
 if exists('+colorcolumn')
 	au BufNewFile,BufRead *.\(h\|c\|cpp\|py\|js\|rs\) set colorcolumn=81
