@@ -1,0 +1,4 @@
+Host name_of_host
+	HostName x.x.x.x
+	User username
+	IdentityFile ~/identity.pem
