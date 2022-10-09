@@ -33,7 +33,7 @@ Useful executable files
 
 - **path**: Print each path on one line.
 - **install-rust**: Install Rust toolchain.
-- **battery**: Print battery percentage for laptop.
+- **battery**: Print battery percentage and charging info for laptop.
 
 ### Xresources
 For xterm. Symlink to `~/.Xresources`
