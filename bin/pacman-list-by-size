@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if which pacman > /dev/null 2>&1; then
+	pacman -Qi | gawk '/^Name/ { x = $3 }; /^Installed Size/ { sub(/Installed Size  *:/, ""); print x":" $0 }' | sort -k2,3n
+else
+	echo "pacman command not found."
+fi
