@@ -1,0 +1,1 @@
+pacman -Qo FILE # Get the package installs FILE

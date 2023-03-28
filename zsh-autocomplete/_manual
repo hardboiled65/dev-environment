@@ -1,0 +1,3 @@
+#compdef manual
+
+_alternative '_path_files -W ~/dev-environment/manual/ -g "*(.)"'

@@ -110,6 +110,10 @@ alias helpme='echo "$HELPME"'
 #*-        Executables       -*#
 export PATH=$PATH:$HARDB_DEV_ENVIRONMENT/bin
 
+#*-       Auto complete      -*#
+fpath=($HARDB_DEV_ENVIRONMENT/zsh-autocomplete $fpath)
+compinit
+
 #*-         Local rc         -*#
 if [ -f "$HOME/.zshrc.local" ]; then
 	source $HOME/.zshrc.local

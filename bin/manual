@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ~/dev-environment/manual/$1
