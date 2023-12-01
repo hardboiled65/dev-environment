@@ -34,6 +34,7 @@ ab rt0 return 0;
 autocmd Bufenter *.\(js\) setlocal shiftwidth=2 expandtab ts=2 softtabstop=2
 autocmd Filetype html setlocal ts=2 softtabstop=2
 autocmd Filetype json setlocal shiftwidth=2 ts=2 softtabstop=2 expandtab
+autocmd Filetype cmake setlocal shiftwidth=4 ts=4 softtabstop=4 expandtab
 " reopening a file for old versions - from /etc/vim/vimrc
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
