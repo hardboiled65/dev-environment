@@ -10,5 +10,6 @@
     ],
     "powermode.enableShake": false,
     "rust-client.channel": "stable",
-    "rust-client.showStdErr": true
+    "rust-client.showStdErr": true,
+    "window.newWindowDimensions": "inherit"
 }
