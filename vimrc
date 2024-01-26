@@ -123,3 +123,10 @@ command Ccomment :0put=MakeCHeaderComment()
 command Cexterncstart :execute "normal! i" . MakeCExternCStart()
 " Cexterncend: Make end extern C
 command Cexterncend :execute "normal! i" . MakeCExternCEnd()
+
+""""""""""""""""""""""""
+""    Local Config
+""""""""""""""""""""""""
+if filereadable(expand("~/.vimrc.local"))
+	source ~/.vimrc.local
+endif
