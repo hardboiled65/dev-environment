@@ -92,6 +92,17 @@ function MakeCGuard()
 	let guard=system('python3 -c "print(\"_' . filename . '\".upper().replace(\".\", \"_\").replace(\"-\", \"_\"), end=\"\")"')
 	return guard " ex) _HEADER_H
 endfunction
+" GetPwdBasename: Get the basename of the current directory
+function GetPwdBasename()
+	let basename=system('basename `pwd`')
+	let basename_n=system('echo -n ' . basename)
+	let cased=system('python3 -c "print(\"' . basename_n . '\".upper().replace(\"-\", \"_\"), end=\"\")"')
+	return cased
+endfunction
+" MakeCGuardPwd: Return C header guard format by filename with pwd basename
+function MakeCGuardPwd()
+	return '_' . GetPwdBasename() . MakeCGuard()
+endfunction
 " MakeCHeaderComment: Return C header comment template
 function MakeCHeaderComment()
 	let filename=expand('%:t')
@@ -115,6 +126,8 @@ endfunction
 """"""""""""""""""""""""
 " Cguard: Make C header guard
 command Cguard :execute "normal! i#ifndef " . MakeCGuard() . "#define " .MakeCGuard() . "#endif /* " . MakeCGuard() . " */"
+" CguardPwd: Make C header guard based on the current directory
+command CguardPwd :execute "normal! i#ifndef " . MakeCGuardPwd() . "#define " .MakeCGuardPwd() . "#endif /* " . MakeCGuardPwd() . " */"
 " Cxxnamespace: Make C++ namespace
 command -nargs=1 Cxxnamespace :execute "normal! inamespace " . "<args>" . " {} // namespace " . "<args>"
 " Ccomment: Make C header comment
